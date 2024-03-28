@@ -1,0 +1,145 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.wp {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  xxbackground-color: #b0e2f2;
+}
+
+.myheader {
+  flex: 1;
+  display: flex;
+  flex-direction: rows;
+  border-bottom: 1px solid black;
+
+  xxbackground-color: #abf2b9;
+}
+
+.logocoaster {
+  flex: 1;
+  
+  height: 60%;
+  position: relative;
+  left: 10px;
+  top: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+
+  xxbackground-color: #eaea9a;
+}
+
+.namelogo {
+  width: 70%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  /* no idea how to get copperplate font  */
+  xxfont-family: wedge, serif;
+  font-size: 90%;
+
+
+  xxbackground-color: orange;
+}
+
+.rheader {
+  flex: 8;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.topspace {
+  flex: 3;
+}
+
+.itemsdiv {
+  flex: 2;
+  
+  display: flex;
+  flex-direction: row;
+
+  xxbackground-color: #ff75ff;
+}
+
+.items {
+  flex: 3;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  transition: 0.5s;
+
+  xxborder: 1px solid red;
+}
+
+
+.itemselected {
+  flex: 3;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: large;
+  border-bottom: 1px solid black;
+  transition: 0.5s;
+}
+
+.items:hover {
+  flex: 3;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 105%;
+  transition: 0.7s;
+}
+
+
+
+
+.screenspace {
+  flex: 7;
+  border-bottom: 1px solid black;
+
+  background-color: pink;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.basic {
+  flex: 5;
+}
+
+.shown {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+
+.screenbottom {
+  flex: 1;
+  
+  xxbackground-color: #ff0026;
+}
+
+/* 
+why is my image not taking up the whole space?
+*/
