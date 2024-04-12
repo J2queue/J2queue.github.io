@@ -54,11 +54,19 @@ body {
   xxbackground-color: orange;
 }
 
+.mhspace {
+  flex: 1;
+
+  xxbackground-color: orange;
+}
+
 .rheader {
-  flex: 8;
+  flex: 7;
 
   display: flex;
   flex-direction: column;
+
+  xxborder: 2px solid red;
 }
 
 .topspace {
@@ -92,6 +100,9 @@ body {
   font-weight: 600;
   font-size: large;
   border-bottom: 1px solid black;
+  color: grey;
+  background-color: #d6d6d6;
+  border-radius: 5%;
   transition: 0.5s;
 }
 
@@ -111,7 +122,7 @@ body {
   flex: 7;
   border-bottom: 1px solid black;
 
-  background-color: pink;
+  xxbackground-color: pink;
 }
 
 img {
@@ -120,7 +131,9 @@ img {
 }
 
 .basic {
-  flex: 5;
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 .shown {
@@ -140,6 +153,226 @@ img {
   xxbackground-color: #ff0026;
 }
 
+
 /* 
-why is my image not taking up the whole space?
+at phone or ipad width, I want to change my landing page image I think
+
+can I change html at certain width too?
+
+ehhh, menu button might be the way to go (hamburger menu)
+
 */
+
+@media only screen and (max-width: 400px) {
+  .itemsdiv {
+    flex: 2;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: #ff75ff;
+  }
+
+  .items {
+    flex: 3;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 50%;
+    transition: 0.5s;
+
+    border: 1px solid red;
+  }
+
+
+  .itemselected {
+    flex: 3;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 60%;
+    border-bottom: 1px solid black;
+    color: grey;
+    background-color: #d6d6d6;
+    border-radius: 5%;
+    transition: 0.5s;
+  }
+
+  .items:hover {
+    flex: 3;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 60%;
+    transition: 0.7s;
+  }
+  /* .icon {
+    display: none;
+  }
+
+  .header1 {
+    display: none;
+  }
+
+  .header2 {
+    display: block;
+    height: 20px;
+    width: 210px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+    position: absolute center;
+    xmargin-top: 5px;
+    margin: auto;
+  } */
+}
+
+
+
+
+
+
+
+
+/* TIC TAC TOE CSS INCOMING  */
+
+.background {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, #0da1c9, #ff99e9, #ff8ae9);
+}
+
+.header {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 70px;
+  color: white;
+}
+
+.directions {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.griddiv {
+  margin: 100px;
+}
+
+.square {
+  height: 470px;
+  width: 470px;
+  background: transparent;
+}
+
+.middle {
+  display: grid;
+  margin: auto;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+}
+
+.blank {
+  background: white;
+}
+
+
+.xTurn {
+  background: #ff0000;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  font-family: sans-serif;
+  font-size: 100px;
+}
+
+.oTurn {
+  background: #0000fa;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  font-family: sans-serif;
+  font-size: 100px;
+}
+/* End of tic tac toe css  */
+
+
+
+
+
+
+
+
+/* FALLING BALL CSS INCOMING */
+.ball {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background-color: #0079f2;
+  animation-name: fallball;
+  animation-duration: 2.8s;
+  xxanimation-timing-function: linear;
+  animation-timing-function: cubic-bezier(1, 1, 1, 1);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.wallball {
+  height: 100%;
+  width: 1px;
+  background-color: black;
+  position: relative;
+  left: var(--actualwall);
+  
+}
+
+@keyframes fallball {
+
+  14%, 42%, 66%, 86%  {
+      top: var(--groundlevel);
+      animation-timing-function: ease-out;
+  }
+
+  29% {
+      top: 70px;
+      animation-timing-function: ease-in;
+  }
+
+  54% {
+      top: 140px;
+      animation-timing-function: ease-in;
+  }
+
+  76% {
+      top: 210px;
+      animation-timing-function: ease-in;
+  }
+
+  92% {
+    top: 280px;
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+      top: var(--groundlevel);
+      animation-timing-function: ease-out;
+      left: var(--farwall);
+  }
+
+}
+
+:root {
+  --groundlevel: 361px;
+  --farwall: 82.4%;
+  --actualwall: 90.3%;
+}
+/* End of falling ball CSS  */
