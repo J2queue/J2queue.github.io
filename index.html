@@ -26,15 +26,20 @@
         </div>
       </div>
 
+      <div id="mhspace" class="mhspace"></div>
+
 
       <div id="rheader" class="rheader">
         <div id="topspace" class="topspace"></div>
         
         <div id="itemsdiv" class="itemsdiv">
+
+          <div id="i1" class="items" onclick="changeView('landingPage', 'i1')">HOME</div>
           
-          <div id="i1" class="items" onclick="changeView('item1screen', 'i1')">TIC TAC TOE</div>
-          <div id="i2" class="items">FIND THE BALL</div>
-          <div id="i3" class="items">FIRST THING EVER CODED</div>
+          <div id="i2" class="items" onclick="changeView('item2screen', 'i2')">TIC TAC TOE v.1</div>
+          <div id="i3" class="items" onclick="changeView('item3screen', 'i3')">TIC TAC TOE 2.0</div>
+          <div id="i4" class="items" onclick="changeView('item4screen', 'i4')">FALLING BALL</div>
+          <div id="i5" class="items" onclick="changeView('item5screen', 'i5')">THE OG</div>
           
         </div>
 
@@ -51,11 +56,72 @@
       <div id="landingPage" class="basic shown">
         <img src="IMG_1504.jpeg"/>
       </div>
+
+
+
       
-      <div id="item1screen" class="basic hide">
-        stuff, like tic tac toe goes here
-        <!-- <img src="IMG_1220.jpeg"/>-->
+      
+      <div id="item2screen" class="basic hide">
+        <!-- okay, time to put tic tac toe in here  -->
+        <div id="wholePage" class="background">
+
+          <div id="header" class="header">Tic Tac Toe</div>
+          <div id="subheader" class="directions">Click a box to start</div>
+
+          <div id="griddiv" class="square middle">
+
+            <div id="topldiv" class="blank" onclick="changeTL()"></div>
+
+            <div id="topmdiv" class="blank" onclick="changeTM()"></div>
+
+            <div id="toprdiv" class="blank" onclick="changeTR()"></div>
+
+
+
+
+            <div id="midldiv" class="blank" onclick="changeML()"></div>
+
+            <div id="midmdiv" class="blank" onclick="changeMM()"></div>
+
+            <div id="midrdiv" class="blank" onclick="changeMR()"></div>
+
+
+
+
+            <div id="bottomldiv" class="blank" onclick="changeBL()"></div>
+
+            <div id="bottommdiv" class="blank" onclick="changeBM()"></div>
+
+            <div id="bottomrdiv" class="blank" onclick="changeBR()"></div>
+
+          </div>
+
+
+        </div>
+        <!-- end of tic tac toe/item2screen code -->
+
+
+
+
+        
       </div>
+
+      <div id="item3screen" class="basic hide">
+        tic tac toe nice goes here
+      </div>
+
+      <div id="item4screen" class="basic hide">
+        Falling ball animation.
+        <div class="ball"></div>
+        <div class="wallball"></div>
+      </div>
+
+      <div id="item5screen" class="basic hide">
+        First Coding Project Ever: "My Snowman Gary" Created on Khan Academy over 6 years ago
+        <img src="Screenshot 2024-04-11 110311.png"/>
+      </div>
+
+      
       
     </div>
 
