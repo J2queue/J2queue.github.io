@@ -2,6 +2,9 @@
 <html>
 
 <head>
+
+  <script src="https://kit.fontawesome.com/5bec1d3578.js" crossorigin="anonymous"></script>
+  
   <meta charset=“UTF-8”>
    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
    <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
@@ -35,11 +38,39 @@
         <div id="itemsdiv" class="itemsdiv">
 
           <div id="i1" class="items" onclick="changeView('landingPage', 'i1')">HOME</div>
-          
           <div id="i2" class="items" onclick="changeView('item2screen', 'i2')">TIC TAC TOE v.1</div>
           <div id="i3" class="items" onclick="changeView('item3screen', 'i3')">TIC TAC TOE 2.0</div>
           <div id="i4" class="items" onclick="changeView('item4screen', 'i4')">FALLING BALL</div>
           <div id="i5" class="items" onclick="changeView('item5screen', 'i5')">THE OG</div>
+
+          
+
+          <!-- now for the icons when screensize changes -->
+          <div id="ic1" class="icons" onclick="changeView('landingPage', 'ic1', 1)">
+            <!-- fa-solid fa-mountain, fab fa-think-peaks, fa-brands fa-canadian-maple-leaf -->
+            <i class="fa-brands fa-canadian-maple-leaf"></i>
+          </div>
+
+          <div id="ic2" class="icons" onclick="changeView('item2screen', 'ic2', 1)">
+            <!-- <i class="fab fa-buromobelexperte"></i> -->
+            v.1
+          </div>
+          
+          <div id="ic3" class="icons" onclick="changeView('item3screen', 'ic3', 1)">
+            <!-- <i class="fab fa-think-peaks"></i> -->
+            v.2
+          </div>
+          
+          <div id="ic4" class="icons" onclick="changeView('item4screen', 'ic4', 1)">
+            <!-- far fa-circle-->
+            <i class="fas fa-circle"></i>
+          </div>
+
+          <div id="ic5" class="icons" onclick="changeView('item5screen', 'ic5', 1)">
+            <!-- fas fa-history -->
+            <i class="fas fa-snowman"></i>
+          </div>
+          <!-- END of icon divs -->
           
         </div>
 
@@ -99,16 +130,61 @@
 
         </div>
         <!-- end of tic tac toe/item2screen code -->
-
-
-
-
         
       </div>
 
+
+      
+
       <div id="item3screen" class="basic hide">
-        tic tac toe nice goes here
+        <!-- tictac2.0 HTML here  -->
+        <div id="wholePage" class="zbackground">
+
+          <div id="zheader" class="zheader">Tic Tac Toe</div>
+          <div id="zsubheader" class="zdirections">Click a box to start</div>
+
+
+          <div id="buttoncoaster" class="buttoncoaster">
+            <button onclick="Restart()">Restart</button>
+          </div>
+
+
+          <div id="zgriddiv" class="zsquare zmiddle">
+
+            <div id="ztopldiv" class="zblank" onclick="change(this)"></div>
+
+            <div id="ztopmdiv" class="zblank" onclick="change(this)"></div>
+
+            <div id="ztoprdiv" class="zblank" onclick="change(this)"></div>
+
+
+
+
+            <div id="zmidldiv" class="zblank" onclick="change(this)"></div>
+
+            <div id="zmidmdiv" class="zblank" onclick="change(this)"></div>
+
+            <div id="zmidrdiv" class="zblank" onclick="change(this)"></div>
+
+
+
+
+            <div id="zbottomldiv" class="zblank" onclick="change(this)"></div>
+
+            <div id="zbottommdiv" class="zblank" onclick="change(this)"></div>
+
+            <div id="zbottomrdiv" class="zblank" onclick="change(this)"></div>
+
+          </div>
+
+
+        </div>
+        <!-- end of tictac2.0/item3screen code  -->
       </div>
+
+
+
+      
 
       <div id="item4screen" class="basic hide">
         Falling ball animation.
@@ -118,7 +194,9 @@
 
       <div id="item5screen" class="basic hide">
         First Coding Project Ever: "My Snowman Gary" Created on Khan Academy over 6 years ago
-        <img src="Screenshot 2024-04-11 110311.png"/>
+        <div id="mypicdiv" class="mypicdiv">
+          <img src="Screenshot 2024-04-11 110311.png"/>
+        </div>
       </div>
 
       
@@ -127,11 +205,20 @@
 
 
 
-    <div id="screenbottom" class="screenbottom">
-      space at bottom of screen goes here
-    </div>
+    <div id="screenbottom" class="screenbottom"></div>
     
   </div>
 </body>
 
 </html>
+
+
+<!-- 
+struggling to get landing page pic to be same height as everything else.
+
+It's still just a little bigger than when you click between menu items.
+
+I tried making a pic container, but didn't seem to fix it?
+
+littl bit similar problem with snowman pic 
+-->
